@@ -1,3 +1,9 @@
-<h1 class="text-3xl font-bold mb-7">Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation on sveltekit</p>
-<a href="/about">About</a>
+<script>
+  import Hero from '$lib/components/Hero.svelte';
+  import AboutMe from '$lib/components/AboutMe.svelte';
+  const {data} = $props();
+  let { devExperience } = data;
+</script>
+
+<Hero />
+<AboutMe {devExperience} />
